@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Resti & Falah</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f8f8;
+    color: #333;
+    text-align: center;
+}
+
+/* COVER */
+.cover {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1520854221256-17451cc331bf');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+.cover button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* SECTION */
+.section {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 15px;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* LOVE STORY */
+.timeline {
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+
+.timeline div {
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+    <p>Undangan Pernikahan</p>
+    <h1>Resti & Falah</h1>
+    <button onclick="openInvite()">Buka Undangan</button>
+</div>
+
+<!-- AUDIO -->
+<audio id="music" loop>
+    <source src="https://files.catbox.moe/6b4d9r.mp3" type="audio/mp3">
+</audio>
+
+<!-- CONTENT -->
+<div id="content" style="display:none;">
+
+    <!-- NAMA -->
+    <div class="section">
+        <h2>Resti & Falah</h2>
+        <p>Minggu, 12 April 2026</p>
+    </div>
+
+    <!-- MEMPELAI -->
+    <div class="section">
+        <div class="card">
+            <h3>Resti Sumiati S.Pd.</h3>
+            <p>Putri dari Bapak Minta & Ibu Siti Aisah</p>
+        </div>
+
+        <div class="card">
+            <h3>Falah</h3>
+            <p>Putra dari Bapak Aji Somantri & Ibu Nenah Sukaenah (Almh)</p>
+        </div>
+    </div>
+
+    <!-- ACARA -->
+    <div class="section">
+        <h2>Acara</h2>
+
+        <div class="card">
+            <h3>Walimatul Ursy</h3>
+            <p>Jumat, 08.00 WIB - Selesai</p>
+            <p>Rumah Mempelai Pria</p>
+            <a class="btn" href="https://maps.app.goo.gl/fdnirpUuzP9LtoSi6?g_st=awb">Lihat Maps</a>
+        </div>
+
+        <div class="card">
+            <h3>Akad Nikah</h3>
+            <p>Minggu, 09.00 WIB</p>
+            <p>Rumah Mempelai Wanita</p>
+        </div>
+
+        <div class="card">
+            <h3>Resepsi</h3>
+            <p>Minggu, 10.00 WIB</p>
+            <p>Rumah Mempelai Wanita</p>
+        </div>
+    </div>
+
+    <!-- LOVE STORY -->
+    <div class="section">
+        <h2>Love Story</h2>
+
+        <div class="timeline">
+            <div>
+                <strong>2014 - Perkenalan</strong>
+                <p>Pertemuan kami bermula di bangku SMP sebagai teman biasa.</p>
+            </div>
+
+            <div>
+                <strong>2018 - Awal Hubungan</strong>
+                <p>Kami kembali dekat dan mulai menjalin hubungan.</p>
+            </div>
+
+            <div>
+                <strong>2025 - Lamaran</strong>
+                <p>Lamaran dilakukan secara daring karena jarak Indonesia - Jepang.</p>
+            </div>
+
+            <div>
+                <strong>2026 - Pernikahan</strong>
+                <p>12 April 2026 menjadi awal kisah baru kami.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- KADO -->
+    <div class="section">
+        <h2>Kirim Kado</h2>
+        <div class="card">
+            <p>kp.Ciangsana II, Rt 001/ Rw 006,<br>
+            Desa Sukamulya, Kecamatan Cikembar,<br>
+            Kab. Sukabumi 43157</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Terima kasih atas doa dan restunya</p>
+    </footer>
+
+</div>
+
+<script>
+function openInvite() {
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("content").style.display = "block";
+
+    var music = document.getElementById("music");
+    music.play();
+}
+</script>
+
+</body>
+</html>
